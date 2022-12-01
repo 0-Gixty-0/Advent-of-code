@@ -11,17 +11,15 @@ def format_input_file(path: str) -> list[str]:
             data = data.rstrip('\n')
             elf_iv.append(data)
     nums.append(elf_iv)
+    f.close()
     return nums
         
-
-
 def calculate_highest_total_cal(nums) -> int:
     total = 0
     temp = 0
     for elf in nums:
         for num in elf:
-            num = int(num)
-            temp += num
+            temp += int(num)
         if temp > total:
             total = temp
         temp = 0

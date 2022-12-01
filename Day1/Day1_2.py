@@ -11,6 +11,7 @@ def format_input_file(path: str) -> list[str]:
             data = data.rstrip('\n')
             elf_iv.append(data)
     nums.append(elf_iv)
+    f.close()
     return nums
 
 def calculate_totals(nums) -> list[int]:
